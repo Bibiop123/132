@@ -105,12 +105,13 @@ button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
   content: ""; position: absolute; top: 0; right: 0; width: 18%; height: 18%;
   background: linear-gradient(225deg, var(--line) 50%, transparent 50%); opacity: .55; pointer-events: none;
 }
-.c.q { background: var(--line); display: flex; flex-direction: column; gap: 2px; cursor: pointer; }
+.c.q { background: #000; display: flex; flex-direction: column; gap: 3px; padding: 1.5px; cursor: pointer; }
+.c.q .d { border-radius: 2px; }
 .c.q .d {
   flex: 1; min-height: 0; background: var(--clue); color: var(--clue-ink);
   font-family: var(--f-clue); font-weight: 700; text-transform: uppercase;
   display: grid; place-items: center; text-align: center; overflow: hidden;
-  line-height: .98; padding: 1px 2px; letter-spacing: -.01em; hyphens: manual;
+  line-height: 1; padding: 1.5px 1px; letter-spacing: -.01em; hyphens: manual;
   word-break: keep-all; overflow-wrap: normal;
 }
 .c.q .d.sel { background: #a19e00; }
@@ -434,7 +435,7 @@ function layout() {
     d.style.fontSize = fs + 'px';
     let guard = 0;
     d.style.overflowWrap = '';
-    while ((d.scrollHeight > d.clientHeight + 1 || d.scrollWidth > d.clientWidth + 1) && fs > 5 && guard++ < 40) { fs -= 0.5; d.style.fontSize = fs + 'px'; }
+    while ((d.scrollHeight > d.clientHeight || d.scrollWidth > d.clientWidth) && fs > 4.5 && guard++ < 50) { fs -= 0.5; d.style.fontSize = fs + 'px'; }
     if (d.scrollWidth > d.clientWidth + 1) d.style.overflowWrap = 'anywhere';
   });
   const bentSize = Math.round(cs * 0.42);
