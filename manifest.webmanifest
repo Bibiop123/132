@@ -2,7 +2,7 @@
   "name": "Mots Fléchés",
   "short_name": "Mots Fléchés",
   "lang": "fr",
-  "description": "Mots fléchés 10×15 : classique, League of Legends, jeux vidéo, Twitch / YouTube.",
+  "description": "Mots fléchés 10×15 : classique, League of Legends, jeux vidéo, Internet, manga.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
